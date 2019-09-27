@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="asset\css\style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src = "asset\javascript\logic.js"></script>
+
+    <title>Trivia Game !</title>
+</head>
+
+<body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Test Your Math !</h1>
+                 
+                <div id = "displayTimer" class="lead"> </div>
+
+                </p>
+            </div>
+        </div>        
+
+
+    <form id = "myForm">
+
+    </form>
+
+</body>
+<script>
+
+var startButton = $("<button>");
+    startButton.attr("id","start");
+    startButton.text("START");
+    
+    $("body").append(startButton);
+
+$(document).ready(function() {
+    $("#displayTimer").text(timeConverter(number));
+    $("#displayTimer").hide();
+
+    $("#start").on("click", function(){
+        startButton.hide();
+        generateQuestions(questions,questionOptions);
+        
+        var doneButton = $("<button>");
+        doneButton.attr("id","done");
+        doneButton.text("DONE");
+    
+        $("body").append(doneButton);
+
+        $("#done").on("click", function(){
+            $("#done").hide();
+            stop();
+            checkAnswer(questions,questionOptions);
+            displayStats();
+        });
+
+        $("#displayTimer").show();
+
+        start();
+
+    });
+
+});
+
+// console.log($("#myForm").children());
+
+</script>
+</html>

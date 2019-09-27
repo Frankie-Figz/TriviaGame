@@ -1,0 +1,34 @@
+.form-check{
+    left: 50px;
+    /* color: white; */
+
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 54px;
+    text-align: center;
+    vertical-align: middle; 
+}
+
+#displayTimer{
+    font-weight: bolder;
+    font-size: 36px;
+    text-align: center;
+    vertical-align: middle; 
+}
+
+#myForm{
+    background-color: aliceblue;
+    font-weight: bolder;
+}
+
+.custom-control-label{
+    margin: 0px 0px 0px 50px;}
+
+body{
+    background-image: url("trivia_game_math_background.jpg");
+}
+/* #displayTimer{
+    visibility: hidden;
+} */
